@@ -189,7 +189,6 @@ def crawling(place, place_lists):
         
         f.close()
     
-    return 0
 
 
 if __name__ == "__main__":
