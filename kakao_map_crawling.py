@@ -13,10 +13,11 @@ from bs4 import BeautifulSoup
 
 
 options = webdriver.ChromeOptions()
-# options.add_argument('headless')
+options.add_argument('headless')
 options.add_argument('lang=ko_KR')
 chromedriver_path = "./chromedriver"
 driver = webdriver.Chrome(os.path.join(os.getcwd(), chromedriver_path), options=options)  # chromedriver 열기
+
 
 
 def main():
@@ -28,7 +29,7 @@ def main():
 
     # 검색할 목록
     # place_infos = ['연남동 애견동반']
-    place_name = '서울 애견동반'
+    place_name = '연남동'
     search(place_name)
     
     driver.quit()
